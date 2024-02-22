@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/irsans-b.eot);
+    src: url(fonts/irsans-b.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-b.woff) format("woff"), url(fonts/irsans-b.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/irsans-m.eot);
+    src: url(fonts/irsans-m.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-m.woff) format("woff"), url(fonts/irsans-m.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 500;
+    src: url(fonts/irsans.eot);
+    src: url(fonts/irsans.eot?#iefix) format("embedded-opentype"), url(fonts/irsans.woff) format("woff"), url(fonts/irsans.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/irsans-l.eot);
+    src: url(fonts/irsans-l.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-l.woff) format("woff"), url(fonts/irsans-l.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: 'irsans';
+    font-style: normal;
+    font-weight: 100;
+    src: url(fonts/irsans-u.eot);
+    src: url(fonts/irsans-u.eot?#iefix) format("embedded-opentype"), url(fonts/irsans-u.woff) format("woff"), url(fonts/irsans-u.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: 'irsansCustome';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/iransansdnbold.eot);
+    src: url(fonts/iransansdnbold.eot?#iefix) format("embedded-opentype"), url(fonts/iransansdnbold.woff) format("woff"), url(fonts/iransansdnbold.ttf) format("truetype")
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-family: 'irsans', irsans, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    font-family: 'irsans', irsans, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    line-height: normal;
+    font-family: 'irsans', irsans, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    display: inline-block
+}
+
+small.error-message {
+    color: red;
+    margin-top: .2rem;
+    margin-right: .2rem;
+}
+
+input, textarea, select, select option, button {
+    font-family: 'irsans', irsans, sans-serif;
+    font-size: .8rem;
+}
+
+button, input[type='submit'] {
+    cursor: pointer;
+}
+
+input:focus, select, option, input, textarea, a:focus, button {
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li,
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    outline: 0;
+}
+
+th {
+    padding: 1rem;
+}
+
+td {
+    padding: .5rem;
+}
+
+tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+.icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*loader*/
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+}
+
+.loader::after {
+    animation-delay: 1s;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.timer {
+    display: flex;
+    background: red;
+    color: blue;
+}
+
+@keyframes animloader {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+

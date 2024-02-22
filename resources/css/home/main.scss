@@ -1,0 +1,3100 @@
+:root {
+    --primary-color: #103b7f;
+    --primary-darken: #380e94;
+    --secondary: #0ae977;
+    --secondary-warning: #ff4504;
+    --secondary-red: #ea1237;
+    --background-color-scroll: #f5f5f5;
+
+    --gray-1: #f8f9fa;
+    --gray-2: #e9ecef;
+    --gray-3: #dee2e6;
+    --gray-4: #ced4da;
+    --gray-5: #adb5bd;
+    --gray-6: #6c757d;
+    --gray-7: #495057;
+    --gray-8: #343a40;
+    --gray-9: #212529;
+    --body-background: #ffffff;
+    --text-color: #000000;
+    --text-color-invert: #ffffff;
+    --text-color-hover: #3c3c3c;
+    --text-color-lighten: #00000070;
+
+    --wallet-bg-color: #380e9417;
+
+    /* others */
+    --color-utils-1: #f7f7f7;
+    --color-utils-whiteblack: #f7f7f7;
+    --color-utils-invert: 0;
+    --color-utils-table-nth-color: #fcfcfc;
+    --color-utils--primary-darken-fixed: #380e94;
+    --color-utils-gray-8-fixed: #343a40;
+    --opacity-utils-1: 1;
+}
+
+[data-theme="dark"] {
+    --primary-color: #103b7f;
+    --primary-darken: #825ecf;
+
+    --secondary: #0ae977;
+    --secondary-warning: #ff4504;
+    --secondary-red: #ea1237;
+
+    --background-color-scroll: #555555; /* Darker background color */
+
+    --gray-1: #2c2c2c; /* Darker gray */
+    --gray-2: #343a40; /* Slightly modified */
+    --gray-3: #495057; /* Slightly modified */
+    --gray-4: #6c757d; /* Slightly modified */
+    --gray-5: #adb5bd;
+    --gray-6: #ced4da;
+    --gray-7: #dee2e6;
+    --gray-8: #e9ecef;
+    --gray-9: #f8f9fa; /* Lighter gray */
+
+    --body-background: #1a1a1a;
+    --text-color: #ffffff;
+    --text-color-invert: #000000;
+    --text-color-hover: #bebebe;
+    --text-color-lighten: #ffffff70;
+
+    --wallet-bg-color: #202027;
+
+    /* others */
+    --color-utils-1: #1d1d1d;
+    --color-utils-whiteblack: #1d1d1d;
+    --color-utils-invert: 1;
+    --color-utils-table-nth-color: #171717;
+    --color-utils--primary-darken-fixed: #380e94;
+    --color-utils-gray-8-fixed: #343a40;
+    --opacity-utils-1: 0.12;
+}
+
+/*******************body********************/
+body {
+    background: var(--body-background) !important;
+    min-height: 100vh;
+    scrollbar-width: thin;
+    direction: rtl;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: var(--background-color-scroll);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+body.noScroll {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.transitionCls,
+.foterBox .ftrLeftCol ul a:hover span:before {
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+
+}
+
+/********************header********************/
+header {
+    width: 100%;
+}
+
+header .headerBx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+header .opnSideMnu {
+    display: none;
+    font-size: 27px;
+    color: var(--gray-9);
+}
+
+header .closSidMnu {
+    display: none;
+    font-size: 20px;
+    color: var(--primary-darken);
+}
+
+header .closSidMnu:hover {
+    color: var(--secondary-red);
+}
+
+header .hdrTopMnu {
+    display: none;
+}
+
+.main-dashboard-access {
+    background-color: black;
+    padding: 2rem;
+}
+
+.main-dashboard-access-item a {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: .5rem;
+}
+
+.main-dashboard-access-item a .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.main-dashboard-access-item a strong {
+    font-size: .8rem;
+    color: whitesmoke;
+    transition: all .3s ease-in-out;
+}
+
+.main-dashboard-access-item a strong:hover {
+    color: var(--bs-link-hover-color);
+}
+
+.hdrRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hdrRight .hdrLogo {
+    width: 141px;
+    height: auto;
+    display: block;
+}
+
+.hdrRight .hdrLogo img {
+    width: 5rem;
+    height: auto;
+}
+
+.hdrRight .hdrLogo:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.hdrRight p {
+    text-align: right;
+    color: var(--text-color-lighten);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 12px;
+    margin: 0 15px;
+    line-height: 1;
+}
+
+.hdrRight ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 25px;
+}
+
+.hdrRight ul a {
+    color: var(--text-color-lighten);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    letter-spacing: -0.42px;
+    line-height: 3;
+}
+
+.hdrRight ul a:hover {
+    color: var(--primary-color);
+}
+
+.hdrRight ul a.active {
+    color: var(--text-color);
+}
+
+.hdrLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hdrLeft div {
+    color: var(--primary-darken);
+    text-align: left;
+    padding-left: 15px;
+}
+
+.hdrLeft div p {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.hdrLeft div h1 {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 24px;
+}
+
+.hdrLeft div h1 span {
+    font-family: "YekanBakhFaNum_Fat";
+    color: var(--secondary);
+}
+
+.hdrLeft i {
+    color: var(--secondary);
+    font-size: 20px;
+}
+
+.headerSec {
+    background: var(--body-background);
+    transition: background 0s;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.hdrNavBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    background: var(--body-background);
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+
+.headerSec.fixed {
+    position: fixed;
+    z-index: 9;
+    box-shadow: 0 13px 20px #00000015;
+}
+
+.headerSec .hdrNavBg {
+    position: absolute;
+    left: 50%;
+    top: 41px;
+    width: 74%;
+    height: 45px;
+    z-index: 1;
+    box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.1);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.hdrNavBox .navMnuUl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 35px;
+}
+
+.navMnuUl__blue {
+    border-left-color: white !important;
+}
+
+.hdrNavBox .navMnuUl a {
+    display: block;
+}
+
+.hdrNavBox .navMnuUl li {
+    border-left: 1px solid var(--gray-1);
+}
+
+.hdrNavBox .navMnuUl li:last-child {
+    border-left: none;
+}
+
+.hdrNavBox .navMnuUl a div {
+    text-align: right;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 45px;
+    color: var(--gray-5);
+}
+
+.hdrNavBox .navMnuUl a p {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.hdrNavBox .navMnuUl a span {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.hdrNavBox .navMnuUl a.active div,
+.hdrNavBox .navMnuUl a.active p,
+.hdrNavBox .navMnuUl a:hover div,
+.hdrNavBox .navMnuUl a:hover p {
+    color: var(--primary-darken);
+}
+
+.navLeft,
+.navLeft ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 20px;
+}
+
+.navLeft ul a {
+    display: block;
+    color: var(--primary-darken);
+    line-height: 1;
+}
+
+.navLeft ul span {
+    font-size: 24px;
+}
+
+.navLeft ul a:hover {
+    color: var(--secondary);
+}
+
+.navLeft ul i {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 7px;
+    height: 7px;
+    background: var(--secondary-red);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
+
+
+.navLeft .navUserBx {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+}
+
+.navLeft .navUserBx span {
+    color: var(--text-color-invert);
+    font-size: 24px;
+}
+
+.navLeft .navUserBx:hover {
+    background: var(--primary-darken);
+    color: white;
+}
+
+.navProflLnk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    background: var(--primary-darken);
+    color: var(--text-color);
+    padding: 8px 15px;
+    gap: 25px;
+    border-radius: 17px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+}
+
+.navProflLnk img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.navProflLnk .navProflDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navProflLnk .navProflDiv p {
+    width: 28px;
+}
+
+.navProflLnk .navProflDiv p span {
+    font-size: 28px;
+    color: white;
+}
+
+.navProflLnk .navProflDiv p small {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 9px;
+    height: 9px;
+    background: var(--secondary-red);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.navProflLnk .navProflDiv div {
+    padding-right: 10px;
+    text-align: right;
+    color: white;
+}
+
+.navProflLnk .navProflDiv div h1 {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    color: var(--text-color-invert);
+}
+
+.navProflLnk .navProflDiv div i {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 12px;
+}
+
+.navProflLnk:hover {
+    background: var(--secondary);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~blue~~~~~~~~~~~~~~~~~~~~~~~~~*/
+header.blue {
+    background: var(--color-utils--primary-darken-fixed);
+}
+
+.blue .headerSec {
+    background: var(--color-utils--primary-darken-fixed);
+}
+
+.blue .hdrNavBox {
+    background: var(--color-utils--primary-darken-fixed);
+}
+
+.blue .hdrLeft div {
+    color: white;
+}
+
+.blue .hdrRight ul a,
+.blue .hdrRight p {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.blue .hdrRight ul a.active,
+.blue .hdrNavBox .navMnuUl a p,
+.blue .navLeft ul a,
+.blue .hdrNavBox .navMnuUl a:hover div,
+.blue .hdrNavBox .navMnuUl a:hover p {
+    color: white;
+}
+
+.blue .hdrNavBox .navMnuUl a.active div,
+.blue .hdrNavBox .navMnuUl a.active p {
+    color: var(--secondary);
+}
+
+.blue .opnSideMnu {
+    color: white;
+}
+
+/*******************footer*********************/
+.foterTop {
+    background: var(--gray-2);
+    padding: 20px 0;
+}
+
+.foterTop .fotrTopBx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foterTop .fotrTopBx .ftrRegBox {
+    width: 50%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.foterTop .fotrTopBx .ftrRegBox .success {
+    background: #0AE977;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    color: white;
+    text-align: center;
+    font-size: .6rem;
+}
+
+.foterTop .ftrRegBox button {
+    min-width: 160px;
+    height: 56px;
+    padding: 5px 15px;
+    background: var(--secondary);
+    border: none;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.foterTop .fotrTopBx button:hover {
+    background: var(--secondary-warning);
+}
+
+.foterTop .fotrTopBx .frmInputBx {
+    width: calc(100% - 160px);
+}
+
+.foterTop .fotrTopBx .ftrSupport {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.foterTop .fotrTopBx .ftrSupport div {
+    color: var(--primary-darken);
+    text-align: left;
+    padding-left: 15px;
+}
+
+.foterTop .fotrTopBx .ftrSupport p {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.foterTop .fotrTopBx .ftrSupport h1 {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 24px;
+}
+
+.foterTop .fotrTopBx .ftrSupport h1 span {
+    font-family: "YekanBakhFaNum_Fat";
+    color: var(--secondary);
+}
+
+.foterTop .fotrTopBx .ftrSupport .hdrLeft i {
+    color: var(--secondary);
+    font-size: 20px;
+}
+
+.foterBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 35px;
+}
+
+.foterBox .footerCol {
+    width: 33%;
+}
+
+.foterBox .footerCol strong {
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 25px;
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.foterBox .footerCol .qAccessMnu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 25px;
+    margin-bottom: 35px;
+}
+
+.foterBox .qAccessMnu a {
+    display: block;
+}
+
+.foterBox .qAccessMnu a div {
+    text-align: right;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 45px;
+    color: var(--gray-5);
+}
+
+.foterBox .qAccessMnu a span {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.foterBox .qAccessMnu a i {
+    font-size: 18px;
+}
+
+.foterBox .qAccessMnu a .icon-Vector-285 {
+    font-size: 16px;
+}
+
+.foterBox .qAccessMnu a p {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.foterBox .qAccessMnu a:hover div,
+.foterBox .qAccessMnu a:hover p {
+    color: var(--primary-darken);
+}
+
+.foterBox .footerMnu {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px 30px;
+}
+
+.foterBox .footerMnu a {
+    color: var(--text-color-lighten);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+}
+
+.foterBox .footerMnu a:hover {
+    color: var(--text-color-hover);
+}
+
+.foterBox .ftrCentrCol {
+    padding: 0 20px;
+}
+
+.foterBox .ftrCentrCol .footerLogo {
+    display: block;
+    width: 141px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.foterBox .ftrCentrCol .footerLogo img {
+    width: 100%;
+    height: auto;
+}
+
+.foterBox .ftrCentrCol p {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.foterBox .ftrCentrCol ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.foterBox .ftrCentrCol ul a {
+    display: block;
+    max-width: 68px;
+}
+
+.foterBox .ftrCentrCol li:last-child a {
+    width: 52px;
+}
+
+.foterBox .ftrCentrCol ul img {
+    width: 100%;
+    height: auto;
+}
+
+.foterBox .ftrCentrCol ul a:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.foterBox .ftrLeftCol i {
+    color: var(--gray-4);
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.foterBox .ftrLeftCol ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 5px 0 30px auto;
+}
+
+.foterBox .ftrLeftCol ul a {
+    font-size: 26px;
+    color: var(--gray-4);
+}
+
+.foterBox .ftrLeftCol ul a:hover i:before,
+.foterBox .ftrLeftCol ul a:hover span:before {
+    color: var(--primary-darken);
+}
+
+.foterBox .ftrLeftCol div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.foterBox .ftrLeftCol p {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.footerBtm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.footerBtm .rievoApp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+}
+
+.footerBtm .rievoApp img {
+    width: 35px;
+    height: auto;
+}
+
+.footerBtm .rievoApp div {
+    padding-right: 25px;
+    text-align: right;
+    color: var(--text-color);
+    max-width: 240px;
+}
+
+.footerBtm .rievoApp div h1 {
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footerBtm .rievoApp div p {
+    font-size: 14px;
+}
+
+.footerBtm ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footerBtm li a {
+    width: 117px;
+    height: auto;
+    display: block;
+}
+
+.footerBtm li img {
+    width: 100%;
+    height: auto;
+}
+
+.footerBtm li a:hover {
+    box-shadow: 0px 0px 10px #00000028;
+}
+
+.copyRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 18px;
+    color: var(--gray-8);
+    text-align: right;
+    font-size: 12px;
+}
+
+/*^^^^^^^^^^^^^^^^frmInputBx^^^^^^^^^^^^^^^^*/
+.persian-date {
+    .input-date {
+        height: 3rem;
+    }
+}
+
+.frmInputBx {
+    height: 58px;
+    border: 2px solid var(--gray-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--body-background);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.frmInputBx span {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.frmInputBx div {
+    height: 100%;
+    border-right: 1px solid var(--gray-2);
+    padding: 0 15px;
+    margin-right: 15px;
+    width: calc(100% - 33px);
+    text-align: right;
+    cursor: pointer;
+
+}
+
+.frmInputBx label {
+    color: var(--gray-6);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.frmInputBx div.clicked label {
+    color: var(--gray-4);
+    font-size: 10px;
+    height: max-content;
+    top: -3px;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+
+.frmInputBx input {
+    width: calc(100% - 10px);
+    position: absolute;
+    height: 23px;
+    display: none;
+    color: var(--text-color);
+    background-color: var(--body-background);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+    border: none;
+}
+
+.frmInputBx div.clicked input {
+    display: block;
+    bottom: -5px;
+}
+
+.frmInputBx div .validMark {
+    font-size: 20px;
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+/******************typeCmntBx*********************/
+.typeCmntBx {
+    border: 2px solid var(--gray-3);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.typeCmntBx .typeCmntLbl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--gray-3);
+    color: var(--text-color);
+    text-align: right;
+    padding-bottom: 15px;
+}
+
+.typeCmntBx .typeCmntLbl span {
+    font-size: 22px;
+}
+
+.typeCmntBx .typeCmntLbl label {
+    font-family: "YekanBakhFaNum_Medium";
+    margin-right: 15px;
+    font-size: 14px;
+    padding-top: 2px;
+}
+
+.typeCmntBx textarea {
+    color: var(--text-color) !important;
+    font-size: 14px;
+    border: none;
+    padding: 15px;
+    background-color: var(--body-background) !important;
+}
+
+/*******************paginatnBx***********************/
+.paginatnBx {
+    margin: 25px auto;
+}
+
+.paginatnBx ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 18px;
+    direction: ltr;
+}
+
+.paginatnBx ul a {
+    color: var(--gray-6);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 18px;
+}
+
+.paginatnBx ul a.threeDots {
+    padding: 1px 8px;
+}
+
+.paginatnBx ul a:hover {
+    color: var(--primary-darken);
+}
+
+/*******************Rate*********************/
+.stars {
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars span {
+    color: var(--secondary-warning) !important;
+    font-size: 18px;
+    margin: 1px;
+}
+
+.stars.one span:first-child {
+    color: var(--secondary-warning) !important;
+}
+
+.stars.tow span:nth-child(1),
+.stars.tow span:nth-child(2) {
+    color: var(--secondary-warning) !important;
+}
+
+.stars.three span:nth-child(1),
+.stars.three span:nth-child(2),
+.stars.three span:nth-child(3) {
+    color: var(--secondary-warning) !important;
+}
+
+.stars.four span:nth-child(1),
+.stars.four span:nth-child(2),
+.stars.four span:nth-child(3),
+.stars.four span:nth-child(4) {
+    color: var(--secondary-warning) !important;
+}
+
+.stars.five span:nth-child(1),
+.stars.five span:nth-child(2),
+.stars.five span:nth-child(3),
+.stars.five span:nth-child(4),
+.stars.five span:nth-child(5) {
+    color: var(--secondary-warning) !important;
+}
+
+/***************rating-stars*******************/
+.rating-stars {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.rating-stars ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+    gap: 10px;
+}
+
+.rating-stars ul span {
+    color: var(--secondary-warning);
+    font-size: 23.6px;
+    cursor: pointer;
+    display: block;
+    width: 19.81px;
+    min-width: 19.81px;
+    max-width: 19.81px;
+    height: auto;
+}
+
+.rating-stars .selected span {
+    font-size: 15px;
+}
+
+.rating-stars .hoverStar span {
+    color: var(--secondary-red);
+}
+
+.blgPageSec .blgPageBx .blgPstScore p {
+    color: var(--gray-5);
+    font-size: 18px;
+}
+
+.blgPageSec .blgPageBx .blgPstScore p i {
+    font-family: "YekanBakhFaNum_Bold";
+    color: var(--primary-darken);
+}
+
+/***************breadcrumbSec*******************/
+.breadcrumbSec {
+    margin: 25px 0;
+}
+
+.breadcrumbSec ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.breadcrumbSec span {
+    color: var(--gray-4);
+    font-size: 14px;
+    display: block;
+}
+
+.breadcrumbSec a {
+    display: block;
+    color: var(--gray-4);
+    text-align: right;
+    font-size: 14px;
+}
+
+.breadcrumbSec li:last-child a {
+    color: var(--gray-7);
+}
+
+.breadcrumbSec li a:hover {
+    color: var(--primary-darken);
+}
+
+/***********************modal**********************/
+.editUsrMdl .modal-content {
+    background: var(--body-background) !important;
+    border-radius: 15px;
+    border: 1px solid var(--gray-2);
+    padding: 45px 35px;
+}
+
+.editUsrMdl .modalHedr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.editUsrMdl .modalHedr h1 {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+}
+
+.editUsrMdl .modalHedr button {
+    background: var(--primary-darken);
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    padding: 15px 65px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.editUsrMdl .modalHedr button:hover {
+    background: var(--secondary);
+}
+
+.editUsrMdl .mdlConfrmCod {
+    text-align: right;
+    margin-top: 45px;
+    margin-bottom: 35px;
+}
+
+.editUsrMdl .mdlConfrmCod strong {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    display: block;
+}
+
+.editUsrMdl .mdlConfrmCod p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.editUsrMdl .mdlNotRecivd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.editUsrMdl .mdlNotRecivd span {
+    color: var(--secondary-warning);
+    text-align: right;
+    font-size: 14px;
+}
+
+.editUsrMdl .mdlNotRecivd button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    display: block;
+}
+
+.editUsrMdl .mdlSaveBtn {
+    width: 100%;
+    height: 52px;
+    margin-top: 35px;
+    background: var(--primary-darken);
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.editUsrMdl .mdlSaveBtn:hover {
+    background: var(--secondary);
+}
+
+.editUsrMdl .frmInputBx {
+    height: 60px;
+}
+
+.editUsrMdl .typeCmntBx {
+    margin-top: 0;
+}
+
+.editUsrMdl .editUsrFrm {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.editUsrMdl .editUsrFrm .mdlFrmTxt {
+    color: var(--gray-6);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.editUsrMdl .editUsrFrm .mdlFrmNtif {
+    color: var(--secondary-red);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+    line-height: 1.8;
+    background: #ff470448;
+    padding: 20px 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.editUsrMdl .editUsrFrm .editMdlRght {
+    width: 65%;
+    padding-left: 20px;
+    margin-top: 26px;
+}
+
+.editUsrMdl .editUsrFrm .editMdlLeft {
+    width: 35%;
+}
+
+.editUsrMdl .mdlChangPic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.editUsrMdl .mdlChangPic .uploadBtn {
+    height: 23px;
+    width: max-content;
+}
+
+.editUsrMdl .mdlChangPic .uploadBtn input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.editUsrMdl .mdlChangPic .uploadBtn span {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: max-content;
+    height: 100%;
+    color: var(--primary-darken);
+    display: block;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 15px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.editUsrMdl .mdlChangPic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.editUsrMdl .editNtfFrm ul {
+    margin-top: 45px;
+}
+
+.editUsrMdl .editNtfFrm li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.editUsrMdl .editNtfFrm li:last-child {
+    margin-bottom: 0;
+}
+
+.editUsrMdl .editNtfFrm ul strong {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.editUsrMdl .editNtfChk {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    min-width: 200px;
+    height: 32px;
+    background: var(--gray-3);
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+}
+
+.editUsrMdl .editNtfChk .form-check {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.editUsrMdl .editNtfChk input,
+.editUsrMdl .editNtfChk label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.editUsrMdl .editNtfChk input {
+    opacity: 0;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+.editUsrMdl .editNtfChk label {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-6);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    background: transparent;
+}
+
+.editUsrMdl .editNtfChk .yesInput label {
+    border-radius: 0px 35px 35px 0px;
+    -webkit-border-radius: 0px 35px 35px 0px;
+    -moz-border-radius: 0px 35px 35px 0px;
+    -ms-border-radius: 0px 35px 35px 0px;
+    -o-border-radius: 0px 35px 35px 0px;
+}
+
+.editUsrMdl .editNtfChk .noInput label {
+    border-radius: 35px 0 0 35px;
+    -webkit-border-radius: 35px 0 0 35px;
+    -moz-border-radius: 35px 0 0 35px;
+    -ms-border-radius: 35px 0 0 35px;
+    -o-border-radius: 35px 0 0 35px;
+}
+
+.editUsrMdl .editNtfChk .yesInput input:checked ~ label {
+    background: var(--secondary);
+    color: var(--text-color);
+}
+
+.editUsrMdl .editNtfChk .noInput input:checked ~ label {
+    background: var(--secondary-red);
+    color: var(--text-color);
+}
+
+/**********************addTicketMdl*****************/
+.addTicketMdl .modal-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.addTicketMdl .ticktMdlRght {
+    background: var(--body-background);
+    padding: 40px 30px;
+    width: 60%;
+    text-align: right;
+}
+
+.addTicketMdl h1 {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+}
+
+.addTicketMdl form .form-select {
+    background: var(--body-background);
+    color: var(--text-color);
+    text-align: right;
+    background-position: left 0.75rem center;
+    padding: 0.375rem 0.75rem 0.375rem 2.25rem;
+    height: 55px;
+    border: 2px solid var(--gray-3);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 15px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.addTicketMdl .tiktMdlSuces {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.addTicketMdl .tiktMdlSuces div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 25px auto;
+    width: 98px;
+    height: 98px;
+    background: var(--body-background);
+    font-size: 43px;
+    color: var(--secondary);
+    box-shadow: 0px 0px 97px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.addTicketMdl .tiktMdlSuces strong {
+    color: var(--text-color);
+    display: block;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 20px;
+}
+
+.addTicketMdl .tiktMdlSuces p {
+    color: var(--primary-darken);
+    margin-top: 10px;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.addTicketMdl .ticktMdlLft {
+    width: 40%;
+    background: #ff47043d;
+    padding: 50px 40px 25px 25px;
+}
+
+.addTicketMdl .ticktMdlLft strong {
+    color: var(--secondary-warning);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.addTicketMdl .ticktMdlLft ul {
+    margin-top: 35px;
+}
+
+.addTicketMdl .ticktMdlLft li {
+    color: var(--secondary-warning);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 15px;
+    padding-right: 10px;
+    margin-bottom: 8px;
+}
+
+.addTicketMdl .ticktMdlLft li:before {
+    position: absolute;
+    content: "";
+    right: -5px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    background: var(--secondary-warning);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.addTicketMdl button {
+    height: 52px;
+    background: var(--primary-darken);
+    border: none;
+    color: var(--text-color);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    padding: 15px 30px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.addTicketMdl button:hover {
+    background: var(--secondary);
+}
+
+/**********************rulesModal*****************/
+.rulesModal .modal-dialog {
+    width: 100%;
+    max-width: 908px;
+}
+
+.rulesModal .modal-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    background: var(--primary-darken);
+}
+
+.rulesModal .rulesMdlRght {
+    background: var(--body-background);
+    padding: 60px 15px;
+    width: 60%;
+    text-align: right;
+    border-radius: 0 15px 15px 0;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    -ms-border-radius: 0 15px 15px 0;
+    -o-border-radius: 0 15px 15px 0;
+}
+
+.rulesModal img {
+    border-radius: 15px 0 0 15px;
+    width: 50%;
+    height: 35rem;
+}
+
+.rulesModal .rulesMdlRght .ruleRghtBx {
+    width: 100%;
+    max-width: 355px;
+    margin: 1px auto;
+}
+
+.rulesModal .rulesMdlRght .ruleRghtBx form .form-control {
+    color: black;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTitle {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTitle strong {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTitle p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTxt {
+    width: 100%;
+    height: 257px;
+    padding: 30px;
+    border: 2px solid var(--gray-4);
+    background: var(--color-utils-whiteblack);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTxt div {
+    color: var(--text-color);
+    text-align: right;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 15px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTxt div::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: var(--background-color-scroll);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.rulesModal .rulesMdlRght .ruleMdlTxt div::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.rulesModal .rulesMdlRght button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: var(--gray-8);
+    color: var(--text-color-invert);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    border: none;
+    margin-top: 20px;
+    font-size: 14px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.rulesModal .rulesMdlRght button[type="submit"]:hover {
+    background: var(--gray-9);
+}
+
+.rulesModal .rulesMdlRght form {
+    direction: ltr;
+    margin: 40px auto 75px auto;
+    width: 100%;
+}
+
+.rulesModal .rulesMdlRght .input-group {
+    width: 100%;
+    height: 58px;
+    border: 2px solid var(--color-utils-whiteblack);
+    background: var(--text-color-invert);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.rulesModal .rulesMdlRght form input {
+    text-align: right;
+    color: var(--gray-8);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+    border: none;
+    border-radius: 12px 0 0 12px;
+    -webkit-border-radius: 12px 0 0 12px;
+    -moz-border-radius: 12px 0 0 12px;
+    -ms-border-radius: 12px 0 0 12px;
+    -o-border-radius: 12px 0 0 12px;
+}
+
+.rulesModal .rulesMdlRght form .input-group-text {
+    color: var(--gray-9);
+    background: transparent;
+    padding: 0.375rem 0.95rem;
+    font-size: 1.1rem;
+    border: none;
+    border-left: 2px solid var(--color-utils-whiteblack);
+}
+
+.rulesModal .rulesMdlRght .mdlSendCod {
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.rulesModal .rulesMdlRght .mdlSendCod .resendCodBx {
+    color: var(--text-color);
+}
+
+.rulesModal .rulesMdlRght .mdlSendCod p {
+    color: var(--secondary-warning);
+    text-align: right;
+    font-size: 14px;
+}
+
+.rulesModal .rulesMdlRght .mdlSendCod button {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    border: none;
+    background: none;
+    height: max-content;
+    width: max-content;
+}
+
+.rulesModal .rulesMdlRght .mdlSendCod button:hover {
+    color: var(--secondary-warning);
+}
+
+.rulesModal .rulesMdlLft {
+    width: 40%;
+    background: var(--primary-darken);
+    padding: 50px 40px 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+    -webkit-border-radius: 15px 0 0 15px;
+    -moz-border-radius: 15px 0 0 15px;
+    -ms-border-radius: 15px 0 0 15px;
+    -o-border-radius: 15px 0 0 15px;
+}
+
+.rulesModal .rulesMdlLft img {
+    width: 106px;
+    height: auto;
+}
+
+/*******************addBankMdl**********************/
+.addBankMdl .modal-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid var(--gray-1);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.addBankMdl .bankMdlRght {
+    background: var(--body-background);
+    width: 55%;
+    padding: 80px 110px;
+}
+
+.addBankMdl .bankMdlRght .bankMdlHed {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.addBankMdl .bankMdlRght .bankMdlHed h1 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.addBankMdl .bankMdlRght .bankMdlHed p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.addBankMdl .bankMdlRght .bankMdlHed span {
+    color: var(--secondary-red);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+    display: block;
+}
+
+.addBankMdl .bankMdlRght .frmInputBx span {
+    font-size: 16px;
+}
+
+.addBankMdl .bankMdlRght button {
+    width: 100%;
+    height: 54px;
+    color: #fff;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    border: none;
+    font-size: 14px;
+    background: var(--primary-darken);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.addBankMdl .bankMdlRght button:hover {
+    background: var(--secondary);
+}
+
+.addBankMdl .bankMdlRght .addBnkReslt {
+    width: 255px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.addBankMdl .bankMdlRght .addBnkReslt div {
+    width: 98px;
+    height: 98px;
+    background: var(--body-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 50px;
+    color: var(--secondary);
+    box-shadow: 0px 0px 97px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.addBankMdl .bankMdlRght .addBnkReslt strong {
+    color: var(--text-color);
+    display: block;
+    margin: 25px auto 10px auto;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 20px;
+}
+
+.addBankMdl .bankMdlRght .addBnkReslt p {
+    color: var(--primary-darken);
+    font-size: 14px;
+    font-family: "YekanBakhFaNum_Bold";
+    margin-bottom: 15px;
+}
+
+.addBankMdl .bankMdlLft {
+    width: 45%;
+    background: var(--wallet-bg-color);
+}
+
+.addBankMdl .bankMdlLft .bankCardBx {
+    position: absolute;
+    width: 480px;
+    height: 260px;
+    padding: 25px;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    background: var(--body-background);
+    box-shadow: 0px 0px 99px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+}
+
+.addBankMdl .bankCardBx .bankCardHed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addBankMdl .bankCardBx .bankCardHed div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.addBankMdl .bankCardBx .bankCardHed div img {
+    max-width: 55px;
+    height: auto;
+}
+
+.addBankMdl .bankCardBx .bankCardHed div p {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+}
+
+.addBankMdl .bankCardBx .shetabIcon {
+    width: 55px;
+    height: auto;
+}
+
+.addBankMdl .bankCardBx .bankNumber {
+    direction: ltr;
+    margin: 45px auto 45px auto;
+    height: 48px;
+    text-align: center;
+    color: var(--primary-darken);
+    font-size: 30px;
+    font-family: "YekanBakhFaNum_Bold";
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.addBankMdl .bankCardBx .bankNumber .fulled:not(:last-child) {
+    margin-left: 20px;
+}
+
+.addBankMdl .bankCardBx .bankNumber span {
+    margin: 1px;
+}
+
+.addBankMdl .bankCardBx .bankNumber span:nth-child(4n) {
+    margin-inline-start: 1.5rem;
+}
+
+.addBankMdl .bankCardBx .bankNumber span:last-child {
+    margin-right: 0;
+}
+
+.addBankMdl .bankCardBx .bankNumber.filled {
+    font-size: 32px;
+}
+
+.addBankMdl .bankCardBx strong {
+    color: var(--text-color);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 15px;
+    display: block;
+}
+
+/*******************increaseMdl**********************/
+.increaseMdl .modal-content {
+    background: var(--body-background);
+    padding: 50px 15px;
+    border: 1px solid var(--gray-1);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.withdrawMdl .modal-content {
+    padding: 50px 40px;
+}
+
+.increaseMdl .incresMdlHed {
+    color: var(--text-color);
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 1px 30px;
+}
+
+.increaseMdl .incresMdlHed h1 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.increaseMdl .incresMdlHed p {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.increaseMdl .chargAmount {
+    margin-bottom: 30px;
+}
+
+.increaseMdl .chargAmount p {
+    color: var(--gray-5);
+    text-align: right;
+    font-size: 12px;
+    padding: 1px 30px;
+}
+
+.increaseMdl .chrgAmontChk {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    gap: 8px;
+}
+
+.increaseMdl .chrgAmontChk::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.increaseMdl .chrgAmontChk::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.increaseMdl .chrgAmontChk .form-check {
+    width: max-content;
+    height: 43px;
+    margin: 0;
+    padding: 0;
+}
+
+.increaseMdl .chrgAmontChk input,
+.increaseMdl .chrgAmontChk label {
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.increaseMdl .chrgAmontChk input {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.increaseMdl .chrgAmontChk label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 22px;
+    justify-content: center;
+    border: 2px solid var(--gray-3);
+    color: var(--gray-7);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 18px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.increaseMdl .chargAmount input:checked ~ label {
+    border-color: var(--primary-color);
+    color: var(--primary-darken);
+}
+
+.increaseMdl .typeAmount {
+    padding: 1px 30px;
+}
+
+.increaseMdl button {
+    width: 100%;
+    height: 54px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    border: none;
+    font-size: 14px;
+    background: var(--primary-darken);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.increaseMdl button:hover {
+    background: var(--secondary);
+}
+
+.increaseMdl .methdMdlTop {
+    color: var(--text-color);
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.increaseMdl .methdMdlTop h1 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.increaseMdl .methdMdlTop p {
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.increaseMdl .methdMdlTxt {
+    text-align: right;
+    margin-bottom: 20px;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+}
+
+.increaseMdl .methdMdlTxt p {
+    color: var(--text-color);
+}
+
+.increaseMdl .methdMdlTxt span {
+    color: var(--secondary-red);
+    display: block;
+}
+
+.increaseMdl .payMthdMdl {
+    height: 285px;
+    overflow: auto;
+    padding: 0 0 0 15px;
+    margin-bottom: 20px;
+}
+
+.increaseMdl .payMthdMdl::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.increaseMdl .payMthdMdl::-webkit-scrollbar-thumb {
+    background-color: var(--gray-7);
+    --webkit-box-shadow: inset 1px 1px 0 var(--gray-7), inset 0 -1px 0 var(--gray-7);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.increaseMdl .payMthdMdl .form-check {
+    width: 100%;
+    height: 88px;
+    padding: 20px 20px 20px 35px;
+    border: 2px solid var(--gray-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.increaseMdl .payMthdMdl input {
+    margin-top: unset;
+    vertical-align: unset;
+}
+
+.increaseMdl .payMthdMdl label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: calc(100% - 16px);
+}
+
+.increaseMdl .payMthdMdl label img {
+    width: 38px;
+    height: auto;
+}
+
+.increaseMdl .payMthdMdl label div {
+    text-align: right;
+}
+
+.increaseMdl .payMthdMdl label strong {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 15px;
+}
+
+.increaseMdl .payMthdMdl label p {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 15px;
+}
+
+.increaseMdl .payMthdMdl .form-check input:checked {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    background-image: none;
+}
+
+.increaseMdl .payMthdMdl .form-check:has(input:checked) {
+    border-color: var(--primary-darken);
+}
+
+.increaseMdl .withdrwReslt {
+    max-width: 380px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.increaseMdl .withdrwReslt div {
+    width: 98px;
+    height: 98px;
+    background: var(--body-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 50px;
+    color: var(--secondary);
+    box-shadow: 0px 0px 97px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.increaseMdl .withdrwReslt strong {
+    color: var(--text-color);
+    display: block;
+    margin: 25px auto 8px auto;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 20px;
+}
+
+.increaseMdl .withdrwReslt p {
+    color: var(--primary-darken);
+    font-size: 14px;
+    font-family: "YekanBakhFaNum_Bold";
+    margin-bottom: 35px;
+}
+
+/*******************sellingMdl***********************/
+.sellingMdl .sellModlBox {
+    background: var(--body-background);
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.sellingMdl .sellMdlRght {
+    padding: 35px 40px;
+    border-left: 1px solid var(--gray-2);
+    width: 50%;
+}
+
+.sellingMdl .sellMdlRght h1 {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sellingMdl .sellMdlRght p {
+    color: var(--text-color);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.sellingMdl .sellMdlRght .sellMdlfee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sellingMdl .sellMdlRght .sellMdlfee span {
+    color: var(--gray-9);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 15px;
+}
+
+.sellingMdl .sellMdlRght .sellMdlfee strong {
+    color: var(--primary-darken);
+    text-align: left;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 30px;
+}
+
+//.sellingMdl .sellMdlRght .sellMdlfee strong:before {
+//    position: absolute;
+//    content: "";
+//    left: 0;
+//    top: -11px;
+//    width: 18px;
+//    height: 18px;
+//    background: url("../../../public/img/toman.png");
+//    background-repeat: no-repeat;
+//    background-size: 18px 18px;
+//}
+
+.sellingMdl .sellMdlRght button {
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    width: 100%;
+    height: 54px;
+    padding: 8px 18px;
+    background: var(--secondary-red);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.sellingMdl .sellMdlRght button:hover {
+    background: var(--secondary);
+}
+
+.sellingMdl .sellMdlLeft {
+    width: 50%;
+    padding: 30px;
+}
+
+.sellingMdl .sellMdlLeft .sellPrdctCod {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.sellingMdl .sellMdlLeft .sellPrdctCod img {
+    width: 87px;
+    height: 82px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.sellingMdl .sellMdlLeft .sellPrdctCod p {
+    color: var(--gray-9);
+    font-size: 14px;
+    text-align: left;
+}
+
+.sellingMdl .sellMdlLeft .sellPrdctCod strong {
+    text-align: left;
+    color: #380e94;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 18px;
+}
+
+.sellingMdl .sellMdlLeft ul {
+    margin-top: 30px;
+}
+
+.sellingMdl .sellMdlLeft ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.sellingMdl .sellMdlLeft ul li:last-child {
+    margin-bottom: 0;
+}
+
+.sellingMdl .sellMdlLeft ul span {
+    font-size: 25px;
+    color: var(--gray-4);
+}
+
+.sellingMdl .sellMdlLeft ul div {
+    text-align: right;
+}
+
+.sellingMdl .sellMdlLeft ul p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 13px;
+}
+
+.sellingMdl .sellMdlLeft ul strong {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 13px;
+    line-height: 1;
+}
+
+.sellingMdl .sellMdlLeft ul strong i {
+    font-size: 12px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.sellingMdl .sellMdlLeft ul li:last-child strong {
+    color: var(--secondary);
+}
+
+.sellingMdl .sellMdlLeft .selPrdctName div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.sellingMdl .selPrdctName strong {
+    color: var(--gray-9);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 18px;
+}
+
+.sellingMdl .selPrdctName i {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+}
+
+.sellingMdl .selPrdctName small {
+    color: var(--gray-9);
+    font-size: 14px;
+}
+
+.sellingMdl .selPrdctName span {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/********************tabBox*************************/
+.tabBox {
+    width: 100%;
+}
+
+.tabBox .tabcontent {
+    display: none;
+    padding: 0;
+}
+
+.tabBox #tabOne {
+    display: block;
+}
+
+/***********************Media***********************/
+@media (max-width: 1199px) {
+    .editUsrMdl .editUsrFrm {
+        flex-direction: column;
+    }
+
+    .editUsrMdl .editUsrFrm .editMdlRght {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 25px;
+    }
+
+    .editUsrMdl .editUsrFrm .editMdlLeft {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .headerSec .hdrNavBg {
+        top: 49px;
+        width: 55%;
+        height: 35px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .addBankMdl .bankMdlRght {
+        padding: 80px 30px 80px 85px;
+    }
+
+    .hdrNavBox .navMnuUl {
+        gap: 0 27px;
+    }
+
+    .addBankMdl .bankMdlLft .bankCardBx {
+        width: 409px;
+        height: 248px;
+        right: -65px;
+    }
+}
+
+@media (max-width: 991px) {
+    .sellingMdl .sellModlBox {
+        flex-direction: column-reverse;
+    }
+
+    .addBankMdl .modal-content {
+        flex-direction: column;
+    }
+
+    .sellingMdl .sellMdlRght {
+        width: 100%;
+        padding: 35px 0 0px 0;
+        border: none;
+    }
+
+    .sellingMdl .sellMdlLeft {
+        width: 100%;
+        padding: 0;
+    }
+
+    .addBankMdl .bankMdlRght {
+        width: 100%;
+    }
+
+    .addBankMdl .bankMdlLft {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .addBankMdl .bankMdlLft .bankCardBx {
+        position: relative;
+        right: unset;
+        top: unset;
+        height: auto;
+        width: 100%;
+        transform: unset;
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -ms-transform: unset;
+        -o-transform: unset;
+    }
+
+    .footerBtm ul {
+        justify-content: flex-start;
+    }
+
+    .foterBox .ftrCentrCol .footerLogo {
+        margin: 15px 0 15px auto;
+    }
+
+    .foterBox .ftrCentrCol p {
+        text-align: right;
+    }
+
+    .foterBox .ftrCentrCol {
+        padding: 0;
+    }
+
+    .foterBox .ftrCentrCol ul {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .footerBtm .rievoApp div {
+        max-width: max-content;
+    }
+
+    .footerBtm {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .foterBox {
+        flex-direction: column;
+    }
+
+    .foterBox .footerCol {
+        width: 100%;
+    }
+
+    header .closSidMnu,
+    header .opnSideMnu {
+        display: block;
+    }
+
+    header .closSidMnu {
+        margin: 1px auto 5px 0;
+        width: max-content;
+    }
+
+    .navMenuBx {
+        position: fixed;
+        width: 250px;
+        right: -250px;
+        top: 0;
+        height: 100vh;
+        overflow: auto;
+        z-index: 15;
+        background: var(--body-background);
+        padding: 20px;
+        direction: ltr;
+    }
+
+    .navMenuBx::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background-color: #f5f5f5;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+    .navMenuBx::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+    .navMenuBx.open {
+        right: 0;
+        box-shadow: -5px 0 10px #00000028;
+    }
+
+    .hdrRight ul {
+        display: none;
+    }
+
+    header .hdrTopMnu,
+    .hdrNavBox .navMnuUl {
+        direction: rtl;
+        display: block;
+    }
+
+    .hdrNavBox .navMnuUl {
+        border-bottom: 2px solid var(--gray-4);
+        margin-top: 40px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .hdrNavBox .navMnuUl li {
+        width: 100%;
+        margin-bottom: 12px;
+        border-left: none;
+        border-bottom: 1px dashed var(--gray-2);
+    }
+
+    .hdrNavBox .navMnuUl li:last-child {
+        border-bottom: none;
+    }
+
+    .hdrNavBox .navMnuUl a {
+        padding-bottom: 12px;
+    }
+
+    header .hdrTopMnu li {
+        margin-bottom: 15px;
+    }
+
+    header .hdrTopMnu a {
+        color: var(--gray-9);
+        text-align: right;
+        font-family: "YekanBakhFaNum_Medium";
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 991px) {
+    .sellingMdl .sellModlBox {
+        padding: 35px 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .addBankMdl .bankMdlRght {
+        padding: 50px 60px;
+    }
+
+    .addTicketMdl .ticktMdlLft {
+        padding: 45px 20px 20px 20px;
+    }
+
+    .addTicketMdl .ticktMdlRght {
+        padding: 35px 20px;
+    }
+
+    .foterTop .fotrTopBx .ftrRegBox {
+        width: 66%;
+    }
+}
+
+@media (max-width: 767px) {
+    .rulesModal img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 15px 15px 0  0;
+    }
+    .rulesModal .rulesMdlRght form input,
+    .rulesModal .rulesMdlRght .ruleMdlTitle p {
+        font-size: 14px;
+    }
+    .rulesModal .modal-dialog {
+        width: 500px;
+        max-width: 95%;
+    }
+    .rulesModal .modal-content {
+        flex-direction: column-reverse;
+    }
+    .rulesModal .rulesMdlLft {
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+        -webkit-border-radius: 15px 15px 0 0;
+        -moz-border-radius: 15px 15px 0 0;
+        -ms-border-radius: 15px 15px 0 0;
+        -o-border-radius: 15px 15px 0 0;
+    }
+    .rulesModal .rulesMdlRght {
+        width: 100%;
+        padding: 20px 12px;
+        border-radius: 0 0 15px 15px;
+        -webkit-border-radius: 0 0 15px 15px;
+        -moz-border-radius: 0 0 15px 15px;
+        -ms-border-radius: 0 0 15px 15px;
+        -o-border-radius: 0 0 15px 15px;
+    }
+
+    .sellingMdl .sellMdlLeft .selPrdctName div {
+        flex-wrap: wrap;
+    }
+
+    .sellingMdl .sellMdlRght p {
+        font-size: 14px;
+    }
+
+    .sellingMdl .sellMdlRght .sellMdlfee strong {
+        font-size: 25px;
+    }
+
+    .addBankMdl .bankMdlRght {
+        padding: 50px 20px;
+    }
+
+    .addTicketMdl .modal-content {
+        flex-direction: column;
+    }
+
+    .addTicketMdl .ticktMdlRght {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .addTicketMdl .ticktMdlLft {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .editUsrMdl .editNtfFrm li {
+        flex-direction: column;
+        gap: 13px;
+        margin-bottom: 22px;
+    }
+
+    .editUsrMdl .editNtfFrm ul strong {
+        text-align: center;
+    }
+
+    .editUsrMdl .modalHedr button {
+        padding: 12px 15px;
+    }
+
+    .editUsrMdl .modal-content {
+        padding: 20px 10px;
+    }
+
+    .frmInputBx label {
+        font-size: 14px;
+    }
+
+    .foterTop .ftrRegBox button {
+        min-width: max-content;
+        font-size: 13px;
+    }
+
+    .foterBox .footerCol .qAccessMnu {
+        justify-content: flex-start;
+    }
+
+    .foterBox .qAccessMnu a p {
+        font-size: 13px;
+    }
+
+    .foterTop .fotrTopBx .ftrRegBox {
+        width: 100%;
+    }
+
+    .foterTop .fotrTopBx .ftrSupport {
+        display: none;
+    }
+
+    .headerSec .hdrNavBg {
+        top: 49px;
+        width: 45%;
+        height: 22px;
+    }
+
+    .hdrRight .hdrLogo {
+        width: 117px;
+    }
+
+    .hdrLeft div {
+        padding-left: 7px;
+    }
+
+    .hdrLeft div p {
+        display: none;
+    }
+
+    .hdrLeft div h1 {
+        line-height: 1;
+        font-size: 16px;
+    }
+
+    .hdrLeft i {
+        font-size: 18px;
+    }
+
+    .hdrRight p {
+        display: none;
+    }
+
+    .navLeft .navUserBx {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+    }
+
+    .navLeft ul span,
+    .navLeft .navUserBx span {
+        font-size: 20px;
+        //color: var(--text-color-invert);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .blue .headerSec .hdrNavBg {
+        box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 575px) {
+    .editUsrMdl .modalHedr h1 {
+        font-size: 15px;
+    }
+
+    .blue .headerSec .hdrNavBg {
+        box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: 480px) {
+    .sellingMdl .sellModlBox {
+        padding: 35px 20px;
+    }
+
+    .addBankMdl .bankCardBx .bankNumber {
+        gap: 15px;
+        margin: 18px auto 40px auto;
+    }
+
+    .addBankMdl .bankCardBx .bankNumber div.fulled {
+        gap: 3px;
+    }
+
+    .addBankMdl .bankCardBx .bankNumber span {
+        font-size: 18px;
+        height: 34px;
+    }
+
+    .addBankMdl .bankCardBx .shetabIcon,
+    .addBankMdl .bankCardBx .bankCardHed div img {
+        width: 50px;
+    }
+
+    .addBankMdl .bankMdlRght .bankMdlHed {
+        margin-bottom: 25px;
+    }
+
+    .addBankMdl .bankMdlLft {
+        padding: 20px 15px;
+    }
+
+    .addBankMdl .bankMdlLft .bankCardBx {
+        padding: 20px 15px;
+    }
+
+    .increaseMdl .withdrwReslt strong {
+        font-size: 17px;
+    }
+
+    .addBankMdl .bankCardBx .bankCardHed div p,
+    .increaseMdl .withdrwReslt p {
+        font-size: 13px;
+    }
+
+    .increaseMdl .payMthdMdl {
+        padding-left: 10px;
+    }
+
+    .increaseMdl .methdMdlTop h1 {
+        margin-bottom: 5px;
+    }
+
+    .increaseMdl .payMthdMdl label {
+        gap: 8px;
+    }
+
+    .increaseMdl .payMthdMdl .form-check {
+        padding: 10px 10px 10px 35px;
+    }
+
+    .increaseMdl .payMthdMdl label img {
+        width: 32px;
+    }
+
+    .increaseMdl .methdMdlTxt,
+    .increaseMdl .payMthdMdl label p {
+        font-size: 13px;
+    }
+
+    .withdrawMdl .modal-content {
+        padding: 25px 15px;
+    }
+
+    .increaseMdl .incresMdlHed h1 {
+        margin-bottom: 10px;
+    }
+
+    .addBankMdl .bankMdlRght .bankMdlHed p,
+    .addBankMdl .bankMdlRght .bankMdlHed span,
+    .increaseMdl .methdMdlTop p,
+    .increaseMdl .incresMdlHed p {
+        font-size: 14px;
+    }
+
+    .increaseMdl .typeAmount,
+    .increaseMdl .chargAmount p,
+    .increaseMdl .incresMdlHed {
+        padding: 1px 10px;
+    }
+
+    .navProflLnk {
+        height: auto;
+        padding: 7px 11px 2px 11px;
+    }
+
+    .foterTop .fotrTopBx .ftrRegBox {
+        flex-direction: column;
+    }
+
+    .foterTop .fotrTopBx .frmInputBx {
+        width: 100%;
+    }
+
+    .foterTop .ftrRegBox button {
+        width: 100%;
+    }
+}
+
+/*
+  mediv0
+*/
+.accordion-button {
+    background-color: transparent !important;
+}
+
+.ftrSupport > i {
+    color: var(--text-color);
+}
+
+.btnView {
+    transition: all 0s;
+}

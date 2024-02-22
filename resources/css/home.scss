@@ -1,0 +1,354 @@
+/************************0 fonts 0****************/
+
+/*-------------YekanBakhFa--------------*/
+@import "home/main";
+
+@font-face {
+    font-family: "YekanBakhFa_Hairline";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 01 Hairline.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 01 Hairline.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 01 Hairline.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 01 Hairline.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Thin";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 02 Thin.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 02 Thin.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 02 Thin.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 02 Thin.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Light";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 03 Light.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 03 Light.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 03 Light.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 03 Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Regular";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 04 Regular.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 04 Regular.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 04 Regular.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 04 Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Medium";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 05 Medium.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 05 Medium.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 05 Medium.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 05 Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Bold";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 06 Bold.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 06 Bold.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 06 Bold.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 06 Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Heavy";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 07 Heavy.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 07 Heavy.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 07 Heavy.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 07 Heavy.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFa_Fat";
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 08 Fat.eot");
+    src: url("home/fonts/YekanBakh/Fa/eot/Yekan Bakh Fa 08 Fat.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/Fa/woff/Yekan Bakh Fa 08 Fat.woff") format("woff"),
+    url("home/fonts/YekanBakh/Fa/ttf/Yekan Bakh Fa 08 Fat.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*-------------YekanBakhFaNum--------------*/
+
+@font-face {
+    font-family: "YekanBakhFaNum_Hairline";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 01 Hairline.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 01 Hairline.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 07 Heavy.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 07 Heavy.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Thin";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 02 Thin.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 02 Thin.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 02 Thin.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 02 Thin.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Light";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 03 Light.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 03 Light.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 03 Light.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 03 Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Regular";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 04 Regular.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 04 Regular.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 04 Regular.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 04 Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Medium";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 05 Medium.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 05 Medium.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 05 Medium.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 05 Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Bold";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 06 Bold.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 06 Bold.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 06 Bold.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 06 Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Heavy";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 07 Heavy.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 07 Heavy.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 07 Heavy.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 07 Heavy.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YekanBakhFaNum_Fat";
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 08 Fat.eot");
+    src: url("home/fonts/YekanBakh/FaNum/eot/Yekan Bakh FaNum 08 Fat.eot") format("embedded-opentype"),
+    url("home/fonts/YekanBakh/FaNum/woff/Yekan Bakh FaNum 08 Fat.woff") format("woff"),
+    url("home/fonts/YekanBakh/FaNum/ttf/Yekan Bakh FaNum 08 Fat.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*-------------Inter--------------*/
+@font-face {
+    font-family: "InterBlack";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Black.ttf");
+}
+
+@font-face {
+    font-family: "InterBold";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "InterExBold";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "InterExLight";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "InterLight";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: "InterMedium";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: "InterRegular";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "InterSmiBold";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "InterThin";
+    font-style: normal;
+    src: url("home/fonts/Inter/Inter-Thin.ttf");
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("home/fonts/icomoon/icomoon.eot?2nkj1j");
+    src: url("home/fonts/icomoon/icomoon.eot?2nkj1j#iefix") format("embedded-opentype"),
+    url("home/fonts/icomoon/icomoon.ttf?2nkj1j") format("truetype"),
+    url("home/fonts/icomoon/icomoon.woff?2nkj1j") format("woff"),
+    url("home/fonts/icomoon/icomoon.svg?2nkj1j#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'social_icon_moo';
+    src: url('home/fonts/icomoon/social_icon_moo.eot?mp1k86');
+    src: url('home/fonts/icomoon/social_icon_moo.eot?mp1k86#iefix') format('embedded-opentype'),
+    url('home/fonts/icomoon/social_icon_moo.ttf?mp1k86') format('truetype'),
+    url('home/fonts/icomoon/social_icon_moo.woff?mp1k86') format('woff'),
+    url('home/fonts/icomoon/social_icon_moo.svg?mp1k86#social_icon_moo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.sellingMdl .sellMdlRght .sellMdlfee strong:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -11px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../public/img/toman.png");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+
+.factrDtailBx .factrTotal div strong::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -11px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../public/img/toman.png");
+    //background-image: "../../../public/img/toman.png";
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+
+.dashListCard .dshLstCrdBdy .dshCrdBtmfee strong:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -11px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../../public/img/toman.png");
+    //background-image: "../../../public/img/toman.png";
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+}
+
+.questionsSec .accordion-button::after {
+    background-image: url("../../public/img/plus.png");
+    //background-image: url("../asset/img/plus.png");
+    margin-left: 0;
+    margin-right: auto;
+    width: 27px;
+    filter: invert(var(--color-utils-invert));
+}
+
+.questionsSec .accordion-button:not(.collapsed)::after {
+    background-image: url("../../public/img/minus.png");
+    //background-image: url("../asset/img/minus.png");
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    filter: invert(var(--color-utils-invert));
+}
+
+.husbndryTop {
+    background: url("../../public/img/bg05.jpg") lightgray 50% / cover no-repeat;
+    //background: "../../../public/img/bg05.jpg" lightgray 50% / cover no-repeat;
+    width: 100%;
+    height: 550px;
+    //background-position: top;
+}
+
+.ranch_bg {
+    opacity: var(--opacity-utils-1);
+    position: absolute;
+    background-image: url("../../public/img/bg06.png");
+    //background-image: "../../../public/img/bg06.png";
+    width: 100%;
+    height: 394px;
+    background-position: top;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.walletTopSec .walletTopBox {
+    width: 100%;
+    padding: 1px 40px 20px 40px;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-image: url("../../public/img/bg08.png");
+    //background-image: "../../../public/img/bg08.png";
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+@import "home/bootstrap.min";
+@import "home/animate.min";
+@import "home/main_font";
+@import "home/home2";
+@import "home/icomoon";
+@import "home/swiper-bundle";
+@import "home/toggle";
+@import "home/shop";
+@import "home/blog";
+@import "home/cart";
+@import "home/login";
+@import "home/dashboard";
+@import "home/persian-datepicker.min";

@@ -1,0 +1,916 @@
+.cartSecTtl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: var(--primary-darken);
+}
+
+.cartSecTtl span {
+    font-size: 12px;
+}
+
+.cartSecTtl h2 {
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    padding-top: 2px;
+}
+
+/******************cartSec******************/
+.cartSec {
+    margin: 30px 0 30px 0;
+}
+
+.cartSec .cartSecBx {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cartSec .cartSecBx .cartSecRght {
+    width: 63%;
+}
+
+.cartSec .cartSecRght .cartSecCrd {
+    margin-bottom: 10px;
+    border: 1px solid var(--gray-2);
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.cartSec .cartSecCrd .cartCrdRght {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 200px);
+    gap: 25px;
+}
+
+.cartSec .cartSecCrd .cartCrdRght .cartCardImg {
+    width: 127px;
+    height: 127px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo h2 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-bottom: 25px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo li span {
+    color: var(--gray-6);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    display: block;
+    margin-top: 1px;
+}
+
+.cartSec .cartSecCrd .cartCrdInfo li p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+}
+
+.cartSec .cartSecCrd .cartCrdPric span {
+    display: block;
+    text-align: right;
+    line-height: 0.5;
+    color: var(--gray-4);
+    text-align: right;
+    font-size: 14px;
+}
+
+.cartSec .cartSecCrd .cartCrdPric p {
+    color: var(--primary-darken);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 24px;
+    width: max-content;
+}
+
+.cartSec .cartSecCrd .cartCrdPric img {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 4px);
+    width: 18px;
+    height: auto;
+}
+
+.cartSec .cartSecRght .cartSecCrd .item_Num_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 160px;
+    max-width: 100%;
+    height: 50px;
+    padding: 0 18px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid var(--gray-2);
+    background: var(--body-background);
+    box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.07);
+}
+
+.cartSec .cartSecCrd .item_Num_box span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //width: 20px;
+    //height: 20px;
+    //cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-size: .7rem;
+    font-weight: bold;
+    //cursor: pointer;
+    //background: red;
+}
+
+//.cartSec .cartSecCrd .item_Num_box span:before,
+//.cartSec .cartSecCrd .item_Num_box span:after {
+//    display: inline-block;
+//    position: absolute;
+//    content: "";
+//    width: 12px;
+//    height: 2px;
+//    background-color: var(--text-color);
+//    transform: translate(-50%, -50%);
+//    left: 50%;
+//    top: 50%;
+//    border-radius: 10px;
+//    -webkit-border-radius: 10px;
+//    -moz-border-radius: 10px;
+//    -ms-border-radius: 10px;
+//    -o-border-radius: 10px;
+//}
+//
+//.cartSec .cartSecCrd .item_Num_box span.plus:after {
+//    transform: translate(-50%, -50%) rotate(90deg);
+//}
+
+.cartSec .cartSecCrd .item_Num_box span.minus {
+    display: none;
+}
+
+.cartSec .cartSecCrd .item_Num_box span:hover:before,
+.cartSec .cartSecCrd .item_Num_box span:hover:after {
+    background: var(--secondary-warning);
+}
+
+.cartSec .cartSecCrd .item_Num_box input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 35px;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    background-color: inherit;
+}
+
+.cartSec .cartSecCrd .item_Num_box button {
+    border: none;
+    background: transparent;
+    color: var(--secondary-red);
+    font-size: 17px;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartSec .cartSecCrd .item_Num_box button:hover {
+    color: var(--secondary-warning);
+}
+
+.cartSec .cartSecBx .cartSecLeft {
+    width: 37%;
+    padding-right: 45px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.cartSec .cartSecBx .cartSecLeft .PayInfoBx {
+    color: var(--gray-6);
+    padding: 25px 35px;
+    text-align: center;
+    border: 1px solid var(--gray-2);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.cartSec .cartSecLeft .PayInfoHed {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cartSec .cartSecLeft .PayInfoHed strong {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 17px;
+}
+
+.cartSec .cartSecLeft .PayInfoHed p {
+    color: var(--gray-6);
+    font-size: 14px;
+}
+
+.cartSec .cartSecLeft .PayInfoBx ul {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.cartSec .cartSecLeft .PayInfoBx li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 13px;
+}
+
+.cartSec .cartSecLeft .PayInfoBx li span {
+    color: var(--gray-6);
+    font-size: 13px;
+}
+
+.cartSec .cartSecLeft .PayInfoBx li p {
+    color: var(--text-color);
+}
+
+.cartSec .cartSecLeft .PayInfoBx .strong {
+    color: var(--gray-9);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 15px;
+}
+
+.cartSec .PayInfoBx .payInfoPric {
+    color: var(--primary-darken);
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 30px;
+    width: max-content;
+    margin: 20px auto 0 auto;
+}
+
+.cartSec .PayInfoBx .payInfoPric img {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 4px);
+    width: 18px;
+    height: auto;
+}
+
+.cartSec .cartSecBx .cartSecLeft button {
+    width: 100%;
+    max-width: 270px;
+    height: 52px;
+    color: #fff;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    border: none;
+    background: var(--primary-darken);
+    margin-top: 20px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    position: relative;
+}
+
+.cartSec .cartSecBx .cartSecLeft button .confirmAndPay {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    line-height: 3.3rem;
+    /*color: #fff;*/
+    /*text-align: center;*/
+    /*font-family: "YekanBakhFaNum_Bold";*/
+    /*font-size: 14px;*/
+    /*border: none;*/
+    /*background: var(--primary-darken);*/
+    /*margin-top: 20px;*/
+    /*border-radius: 12px;*/
+    /*-webkit-border-radius: 12px;*/
+    /*-moz-border-radius: 12px;*/
+    /*-ms-border-radius: 12px;*/
+    /*-o-border-radius: 12px;*/
+}
+
+.cartSec .cartSecBx .cartSecLeft button:hover {
+    background: var(--secondary);
+}
+
+/******************payment-method******************/
+.payMetdRght {
+    width: 53%;
+    padding-left: 2%;
+}
+
+.payMetdRght .payMethdFrm {
+    border: 1px solid var(--gray-2);
+    padding: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.payMetdRght .payMethdFrm .form-button {
+    width: 100%;
+    height: 88px;
+    padding: 20px 35px 20px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--gray-3);
+    background: var(--gray-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.payMetdRght .payMethdFrm .form-button .confirm:nth-child(1) {
+    background: #0ae977;
+}
+.payMetdRght .payMethdFrm .form-button .confirm:nth-child(2) {
+    background: #ff4646;
+}
+
+.payMetdRght .payMethdFrm .button-discount {
+    color: var(--text-color);
+    background: var(--gray-2);
+    width: 100%;
+    padding: 1rem 0;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.payMetdRght .payMethdFrm .form-check {
+    width: 100%;
+    height: 88px;
+    padding: 20px 35px 20px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--gray-3);
+    background: var(--gray-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.payMetdRght .payMethdFrm .form-check input {
+    float: right;
+    margin-right: -1em;
+    margin-left: 0;
+    margin-top: unset;
+    vertical-align: unset;
+}
+
+.payMetdRght .payMethdFrm .form-check .discount {
+    width: 70rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    float: right;
+    margin-right: .5rem;
+    margin-left: 10rem;
+    margin-top: unset;
+    vertical-align: unset;
+}
+
+.payMetdRght .payMethdFrm .form-check input:checked {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    background-image: none;
+}
+
+.payMetdRght .payMethdFrm .form-check:has(input:checked) {
+    background: var(--body-background);
+    border-color: var(--primary-darken);
+}
+
+.payMetdRght .payMethdFrm .form-check label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    width: calc(100% - 16px);
+}
+
+.payMetdRght .payMethdFrm .form-check img {
+    width: 60px;
+    height: auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.payMetdRght .payMethdFrm .form-check p {
+    color: var(--gray-9);
+    text-align: right;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 20px 0 20px;
+    gap: 20px;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn p img {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 4px);
+    width: 18px;
+    height: auto;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn p {
+    color: var(--primary-darken);
+    text-align: left;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 30px;
+    width: max-content;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn strong {
+    display: block;
+    text-align: right;
+    line-height: 1.5;
+    color: var(--gray-9);
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn a, .payMetdRght .payMethdFrm .payMethdBtn button {
+    width: 100%;
+    max-width: 240px;
+    height: 54px;
+    color: #fff;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    border: none;
+    background: var(--primary-darken);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    line-height: 54px;
+}
+
+.payMetdRght .payMethdFrm .payMethdBtn button:hover {
+    background: var(--secondary);
+}
+
+.payMetdLeft {
+    width: 47%;
+}
+
+.payMetdLeft .livstockCrd {
+    border: 1px solid var(--gray-2);
+    padding: 18px 18px 18px 25px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo img {
+    object-fit: cover;
+    width: 88px;
+    height: 88px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo div {
+    max-width: 140px;
+    text-align: right;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo h2 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px 20px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo span {
+    color: var(--gray-6);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+}
+
+.payMetdLeft .livstockCrd .livstckInfo p {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 14px;
+}
+
+.payMetdLeft .livstockCrd .livstockPric {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.payMetdLeft .livstockCrd .livstockPric strong {
+    color: var(--text-color);
+    text-align: left;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    display: block;
+    direction: ltr;
+}
+
+.payMetdLeft .livstockCrd .livstockPric span {
+    display: block;
+    text-align: right;
+    line-height: 0.5;
+    color: var(--gray-4);
+    font-size: 14px;
+}
+
+.payMetdLeft .livstockCrd .livstockPric p {
+    color: var(--primary-darken);
+    text-align: left;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 24px;
+    width: max-content;
+}
+
+.payMetdLeft .livstockCrd .livstockPric img {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% - 4px);
+    width: 18px;
+    height: auto;
+}
+
+/*****************payResultSec************/
+.payResultSec .payResultBx {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    margin: 35px auto;
+}
+
+.payResultSec .payResultBx div {
+    width: 126px;
+    height: 126px;
+    box-shadow: 0px 0px 97px rgba(0, 0, 0, 0.1);
+    background: var(--body-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.payResultSec .payResultBx div span {
+    font-size: 56px;
+}
+
+.payResultSec .payResultBx .failure span {
+    color: var(--secondary-red);
+}
+
+.payResultSec .payResultBx .success span {
+    color: var(--secondary);
+}
+
+.payResultSec .payResultBx h1 {
+    color: var(--text-color);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 29px;
+    line-height: 1.9;
+}
+
+.payResultSec .payResultBx strong {
+    color: var(--primary-darken);
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.payResultSec .payResultBx i {
+    color: var(--body-background);
+    line-height: 1;
+    background: var(--gray-8);
+    padding: 4px 12px;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 12px;
+    width: max-content;
+    display: block;
+    margin: 50px auto 25px auto;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.payResultSec .payResultBx p {
+    color: var(--secondary-warning);
+    font-family: "YekanBakhFaNum_Medium";
+    font-size: 15px;
+    padding: 25px 100px;
+    background: #ff470448;
+    display: block;
+    margin: 35px auto;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.payResultSec .payResultBx a {
+    width: 100%;
+    max-width: 256px;
+    height: 52px;
+    color: #fff;
+    text-align: center;
+    font-family: "YekanBakhFaNum_Bold";
+    font-size: 14px;
+    background: var(--primary-darken);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.payResultSec .payResultBx a:hover {
+    background: var(--secondary);
+}
+
+/******************media******************/
+@media (max-width: 1199px) {
+    .cartSec .cartSecCrd .cartCrdInfo ul {
+        flex-wrap: wrap;
+    }
+
+    .cartSec .cartSecCrd .cartCrdInfo li {
+        min-width: max-content;
+    }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cartSec .cartSecRght .cartSecCrd {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .cartSec .cartSecRght .cartSecCrd .item_Num_box {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .cartSec .cartSecCrd .cartCrdRght {
+        width: 100%;
+    }
+
+    .cartSec .cartSecCrd .cartCrdInfo ul {
+        gap: 3px 15px;
+    }
+
+    .cartSec .cartSecBx .cartSecLeft {
+        padding-right: 15px;
+    }
+
+    .cartSec .cartSecBx .cartSecLeft .PayInfoBx {
+        padding: 25px 20px;
+    }
+
+    .payMetdRght {
+        width: 42%;
+        padding-left: 1%;
+    }
+
+    .payMetdRght .payMethdFrm {
+        padding: 15px;
+    }
+
+    .payMetdLeft {
+        width: 58%;
+    }
+
+    .payMetdRght .payMethdFrm .payMethdBtn {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 767px) {
+    .payResultSec .payResultBx h1 {
+        font-size: 24px;
+    }
+
+    .cartSec .cartSecRght .cartSecCrd {
+        padding: 12px;
+    }
+
+    .cartSec .cartSecCrd .cartCrdRght {
+        gap: 15px;
+    }
+
+    .cartSec .cartSecCrd .cartCrdInfo ul {
+        gap: 5px 15px;
+    }
+
+    .cartSec .cartSecBx .cartSecRght {
+        width: 100%;
+    }
+
+    .cartSec .cartSecBx .cartSecLeft {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 25px;
+    }
+
+    .cartSec .cartSecBx {
+        flex-direction: column;
+    }
+
+    .payMetdRght {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .payMetdLeft {
+        width: 100%;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 575px) {
+    .payResultSec .payResultBx strong {
+        font-size: 15px;
+    }
+
+    .payResultSec .payResultBx p {
+        padding: 25px;
+    }
+
+    .payResultSec .payResultBx div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cartSec .cartSecRght .cartSecCrd {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cartSec .cartSecRght .cartSecCrd .item_Num_box {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .cartSec .cartSecCrd .cartCrdRght {
+        width: 100%;
+    }
+
+    .cartSec .cartSecCrd .cartCrdInfo ul {
+        gap: 3px 15px;
+    }
+
+    .cartSec .cartSecBx .cartSecLeft {
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartSec .cartSecBx .cartSecLeft .PayInfoBx {
+        padding: 25px 20px;
+    }
+
+    .payMetdRght .payMethdFrm {
+        padding: 15px;
+    }
+
+    .payMetdRght .payMethdFrm .payMethdBtn {
+        flex-direction: column-reverse;
+    }
+
+    .payMetdLeft .livstockCrd {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .payMetdLeft .livstockCrd .livstockPric {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+}

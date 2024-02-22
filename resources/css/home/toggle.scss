@@ -1,0 +1,60 @@
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+
+.theme-switch {
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    width: 48px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider-theme {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider-theme:before {
+    background-color: var(--body-background);
+    bottom: 4px;
+    content: "";
+    height: 14px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 14px;
+}
+
+input:checked + .slider-theme {
+    background-color: var(--secondary);
+}
+
+input:checked + .slider-theme:before {
+    transform: translateX(26px);
+}
+
+.slider-theme.round {
+    border-radius: 34px;
+}
+
+.slider-theme.round:before {
+    border-radius: 50%;
+}
